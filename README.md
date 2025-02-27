@@ -50,6 +50,7 @@ This repository demonstrates how to integrate Go Fiber, a fast and lightweight w
 
     ```bash
     go run producer/main.go
+    go run worker/main.go
     ```
 
     The Fiber server will start, typically on port 3000.
@@ -63,6 +64,16 @@ This repository demonstrates how to integrate Go Fiber, a fast and lightweight w
     ```bash
     curl -X POST -H "Content-Type: application/json" -d '{"message": "Hello, Kafka!"}' http://localhost:3000/publish
     ```
+                                               OR
+    
+    Run Postman application
+       Select Method POST Past This URL(http://localhost:3000/publish)
+       Select body
+            Select x-www-form-urlencoded
+            In key = message
+            In val = any text
+    send
+
 
 * **Worker messages:**
 
